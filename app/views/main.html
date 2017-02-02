@@ -1,5 +1,5 @@
 <div ng-controller="MainCtrl as vm">
-  <div class="jumbotron" ng-click="vm.hideElement()" ng-if="vm.showJumbotron">
+  <div class="jumbotron" ng-click="vm.buttonClick()" ng-if="vm.showJumbotron">
     <h1>'Allo, 'Allo!</h1>
     <p class="lead">
       <img src="images/yeoman.png" alt="I'm Yeoman"><br>
@@ -27,6 +27,7 @@
     <div class="col-xs-6">
       <p ng-repeat="thing in vm.awesomeThings">{{ thing }}</p>
     </div>
+
   </div>
 
 </div>

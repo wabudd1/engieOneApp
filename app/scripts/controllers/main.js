@@ -8,17 +8,29 @@
  * Controller of the engieOneAppApp
  */
 angular.module('engieOneAppApp')
-  .controller('MainCtrl', function () {
-    var vm = this;
-    vm.showJumbotron = true;
-    vm.hideElement = hideElement;
-    vm.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', MainCtrl);
 
-    function hideElement() {
-      vm.showJumbotron = !vm.showJumbotron;
-    }
-  });
+function MainCtrl(prompt) {
+  var vm = this;
+  vm.showJumbotron = true;
+  vm.buttonClick = buttonClick;
+  vm.awesomeThings = [
+    'HTML5 Boilerplate',
+    'AngularJS',
+    'Karma'
+  ];
+
+  function buttonClick() {
+    // vm.showJumbotron = !vm.showJumbotron;
+
+    prompt({
+      title: 'Delete this Thing?',
+      message: 'Are you sure you want to do that?'
+      }).then(function(){
+        //he hit ok and not cancel
+    });
+  }
+
+
+
+}
