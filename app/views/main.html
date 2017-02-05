@@ -1,11 +1,14 @@
 <div ng-controller="MainCtrl as vm">
-  <div class="jumbotron" ng-click="vm.buttonClick()" ng-if="vm.showJumbotron">
+  <div class="jumbotron" ng-if="vm.showJumbotron">
     <h1>'Allo, 'Allo!</h1>
     <p class="lead">
       <img src="images/yeoman.png" alt="I'm Yeoman"><br>
       Always a pleasure scaffolding your apps.
     </p>
-    <p><a class="btn btn-lg btn-success">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    <p>
+      <a class="btn btn-lg btn-success" ng-click="vm.buttonClick()">Splendid cgPrompt!<span class="glyphicon glyphicon-ok"></span></a>
+      <a class="btn btn-lg btn-success" ng-click="vm.modalClick()">Splendid modal!<span class="glyphicon glyphicon-ok"></span></a>
+    </p>
   </div>
 
   <div class="row marketing">

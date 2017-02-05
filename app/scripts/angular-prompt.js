@@ -11,9 +11,9 @@ angular.module('cgPrompt').factory('prompt',['$uibModal','$q',function($uibModal
             label: '',
             value: '',
             values: false,
-            buttons: [
-                {label:'Cancel',cancel:true},
-                {label:'OK',primary:true}
+            buttons: [                
+                {label:'OK',primary:true},
+                {label:'Cancel',cancel:true}
             ]
         };
 
