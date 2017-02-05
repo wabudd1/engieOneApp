@@ -26,7 +26,24 @@ function MainCtrl(prompt, $uibModal, $log) {
 
     prompt({
       title: 'Delete this Thing?',
-      message: 'Are you sure you want to do that?'
+      message: 'Are you sure you want to do that?',
+      buttons: [
+        {
+          label: 'OK',
+          primary: true,
+          cancel: false,
+          class: '',
+          style: 'color: black;'
+        },
+        {
+          label: 'Cancel',
+          primary: false,
+          cancel: true,
+          class: '',
+          style: ''
+        }
+      ]
+
       }).then(function(){
         //hit ok and not cancel
     });
